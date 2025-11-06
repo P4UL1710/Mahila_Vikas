@@ -30,7 +30,15 @@ export function Navbar() {
           </Link>
         </div>
 
-        <LanguageSwitcher />
+        <div className="flex items-center gap-4">
+          <Link
+            href="/login"
+            className="bg-[#d4a5a5] text-white px-6 py-2 rounded-lg hover:bg-[#c4949a] transition-colors font-semibold"
+          >
+            {t("nav.login")}
+          </Link>
+          <LanguageSwitcher />
+        </div>
       </div>
     </nav>
   )
