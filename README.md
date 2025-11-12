@@ -9,4 +9,3 @@ This ia my mini project for the subject in my semester 3 ie Idea Lab in my compu
 My project is live at:
 
 **[https://vercel.com/pawans-projects-3b3e23bc/v0-mahila-vikas-app-prototype](https://vercel.com/pawans-projects-3b3e23bc/v0-mahila-vikas-app-prototype)**
-
