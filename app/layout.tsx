@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import "./globals.css"
+import { AuthProvider } from "@/context/auth-context"
+import { Navbar } from "@/components/navbar"
 
 const poppins = Poppins({
   subsets: ["latin", "devanagari"],
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
   title: "Mahila Vikas - Empowering Rural Women Entrepreneurs",
   description:
     "A platform providing business education, mentorship, and community support for rural women entrepreneurs.",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -22,7 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="mr">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <AuthProvider>
+          <Navbar />
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   )
 }

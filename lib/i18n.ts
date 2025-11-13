@@ -10,6 +10,7 @@ const resources = {
         community: "समुदाय",
         contact: "संपर्क",
         login: "लॉगिन",
+        logout: "लॉगआउट",
       },
       hero: {
         title: "महिला विकास",
@@ -69,6 +70,7 @@ const resources = {
         community: "समुदाय",
         contact: "संपर्क",
         login: "लॉगिन",
+        logout: "लॉगआउट",
       },
       hero: {
         title: "महिला विकास",
@@ -128,6 +130,7 @@ const resources = {
         community: "Community",
         contact: "Contact",
         login: "Login",
+        logout: "Logout",
       },
       hero: {
         title: "Mahila Vikas",

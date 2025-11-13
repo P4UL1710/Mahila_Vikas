@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import "../../lib/i18n"
 
@@ -31,7 +30,6 @@ export default function CommunityPage() {
   if (!mounted) {
     return (
       <main>
-        <Navbar />
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4">
             <h1 className="text-4xl font-bold text-[#4a4a4a]">{t("community.title")}</h1>
@@ -44,7 +42,6 @@ export default function CommunityPage() {
 
   return (
     <main>
-      <Navbar />
       <section className="py-20 bg-[#fef9f6]">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-[#4a4a4a] mb-4">{t("community.title")}</h1>

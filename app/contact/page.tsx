@@ -4,7 +4,6 @@ import type React from "react"
 
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
-import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import "../../lib/i18n"
 
@@ -33,7 +32,6 @@ export default function ContactPage() {
 
   return (
     <main>
-      <Navbar />
       <section className="py-20">
         <div className="max-w-2xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-[#4a4a4a] text-center mb-12">{t("contact.title")}</h1>

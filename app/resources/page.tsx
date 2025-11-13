@@ -1,7 +1,6 @@
 "use client"
 
 import { useTranslation } from "react-i18next"
-import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
 import "../../lib/i18n"
@@ -46,7 +45,6 @@ export default function ResourcesPage() {
 
   return (
     <main>
-      <Navbar />
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-[#4a4a4a] text-center mb-12">{t("resources.title")}</h1>

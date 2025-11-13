@@ -1,8 +1,9 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { useAuth } from "@/context/auth-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Alert, AlertDescription } from "@/components/ui/alert"
@@ -13,6 +14,8 @@ export function PhoneLogin() {
   const [step, setStep] = useState<"phone" | "otp">("phone")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
+  const { login } = useAuth()
+  const router = useRouter()
 
   const handlePhoneSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -43,7 +46,11 @@ export function PhoneLogin() {
     setLoading(true)
     // Simulate API call
     setTimeout(() => {
-      alert("Login successful with phone!")
+      login({
+        phone: `+91${phone}`,
+        name: `User-${phone.slice(-4)}`,
+      })
+      router.push("/dashboard")
       setLoading(false)
     }, 1500)
   }
